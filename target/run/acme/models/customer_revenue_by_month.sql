@@ -2,7 +2,8 @@
 
   create or replace view `production-environment-306717`.`general_explorations`.`customer_revenue_by_month`
   OPTIONS()
-  as with subscription_periods as (
+  as 
+with subscription_periods as (
 
     select * from `production-environment-306717`.`general_explorations`.`subscription_periods`
 

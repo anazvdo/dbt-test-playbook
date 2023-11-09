@@ -1,3 +1,4 @@
+
 with subscription_periods as (
 
     select * from `production-environment-306717`.`general_explorations`.`subscription_periods`

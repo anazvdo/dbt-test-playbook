@@ -1,3 +1,4 @@
+{{ config(materialized='view') }}
 with subscription_periods as (
 
     select * from {{ ref('subscription_periods') }}

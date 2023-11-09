@@ -1,3 +1,4 @@
+{{ config(materialized='view') }}
 with mrr as (
 
     select * from {{ ref('customer_revenue_by_month') }}

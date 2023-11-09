@@ -2,7 +2,8 @@
 
   create or replace view `production-environment-306717`.`general_explorations`.`customer_churn_month`
   OPTIONS()
-  as with mrr as (
+  as 
+with mrr as (
 
     select * from `production-environment-306717`.`general_explorations`.`customer_revenue_by_month`
 

@@ -1,3 +1,4 @@
+
 with mrr as (
 
     select * from `production-environment-306717`.`general_explorations`.`customer_revenue_by_month`
