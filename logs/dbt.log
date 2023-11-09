@@ -10043,3 +10043,37 @@ The `data-paths` config has been renamed to `seed-paths`. Please update your
 [0m09:11:03.301174 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'deprecation', 'label': 'a3274434-4d50-4f52-a1bb-ff6833fd3865', 'property_': 'warn', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1099cf3d0>]}
 [0m09:11:03.324638 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'a3274434-4d50-4f52-a1bb-ff6833fd3865', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1099b7a90>]}
 [0m09:11:03.331519 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'a3274434-4d50-4f52-a1bb-ff6833fd3865', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1091ffc10>]}
+[0m09:18:54.732115 [error] [MainThread]: Encountered an error:
+
+[0m09:18:54.748624 [error] [MainThread]: Traceback (most recent call last):
+  File "/Users/olaisaac/dbt-env/lib/python3.11/site-packages/dbt/cli/requires.py", line 87, in wrapper
+    result, success = func(*args, **kwargs)
+                      ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/olaisaac/dbt-env/lib/python3.11/site-packages/dbt/cli/requires.py", line 72, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/olaisaac/dbt-env/lib/python3.11/site-packages/dbt/cli/requires.py", line 143, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/olaisaac/dbt-env/lib/python3.11/site-packages/dbt/cli/requires.py", line 172, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/olaisaac/dbt-env/lib/python3.11/site-packages/dbt/cli/requires.py", line 219, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/olaisaac/dbt-env/lib/python3.11/site-packages/dbt/cli/main.py", line 320, in docs_serve
+    results = task.run()
+              ^^^^^^^^^^
+  File "/Users/olaisaac/dbt-env/lib/python3.11/site-packages/dbt/task/serve.py", line 28, in run
+    httpd.serve_forever()
+  File "/opt/homebrew/Cellar/python@3.11/3.11.4/Frameworks/Python.framework/Versions/3.11/lib/python3.11/socketserver.py", line 233, in serve_forever
+    ready = selector.select(poll_interval)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.11/3.11.4/Frameworks/Python.framework/Versions/3.11/lib/python3.11/selectors.py", line 415, in select
+    fd_event_list = self._selector.poll(timeout)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt
+
+[0m09:18:54.750828 [debug] [MainThread]: Command `dbt docs serve` failed at 09:18:54.750234 after 471.77 seconds
+[0m09:18:54.751565 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108f1cf10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108f452d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1099b7610>]}
+[0m09:18:54.752911 [debug] [MainThread]: Flushing usage events
